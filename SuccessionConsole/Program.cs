@@ -22,11 +22,9 @@ for (var i = 0; i < m; i++)
     possibleClaims.Add(name);
 }
 
-var claimants = possibleClaims.ToArray();
-
 // Calculate royal blood percentage for each claimant
 var royalBlood = new Dictionary<string, double>();
-foreach (var claimant in claimants)
+foreach (var claimant in possibleClaims)
 {
     royalBlood[claimant] = CalculateRoyalBlood(founder, family, claimant);
 }
